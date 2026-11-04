@@ -1,0 +1,20 @@
+main: com.cdmstudios.piechart.PieChart
+version: 1.0.0-SNAPSHOT
+name: PieChart
+author: CDMStudios
+description: A Minecraft development project.
+api-version: 1.21
+
+commands:
+  piechart:
+    description: Shows a readable chart of nearby block entities or entities, with optional auto-updates.
+    usage: /piechart [radius] [blocks|entities] or /piechart <on|off|toggle> [radius] [blocks|entities]
+    aliases: [pie]
+    permission: piechart.use
+    permission-message: You do not have permission to use this command.
+
+permissions:
+  piechart.use:
+    description: Allows use of /piechart
+    default: op
+

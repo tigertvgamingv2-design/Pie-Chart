@@ -1,0 +1,33 @@
+license:
+  key: "YOUR_LICENSE_KEY"
+
+# Chart behavior. Changes take effect after restarting the server.
+chart:
+  # Radius used when /piechart is run without a radius argument.
+  default-radius: 32
+  # Largest radius players may request. Must be between 1 and 512.
+  max-radius: 128
+  # Server-wide maximum chunk distance from the player's current chunk to scan for block entities.
+  # Admins can lower this per player/group with the permission piechart.chunks.<number>
+  # (e.g. piechart.chunks.1). If several apply, the highest is used, never above this value.
+  # Only already-loaded chunks are checked; the plugin never loads chunks.
+  # For example, 2 scans at most a 5x5 chunk area (subject to the radius above).
+  loaded-chunk-radius: 2
+  # How often enabled charts are checked for changes, in seconds.
+  auto-update-interval-seconds: 10
+  # Number of leading types shown individually; remaining types are grouped as Other.
+  max-entries: 8
+  # Width of each chart bar, in characters.
+  bar-length: 20
+  # Bar colors, in display order. Supports legacy codes (&a) and hex colors (#12abef).
+  colors:
+    - "&c"
+    - "&6"
+    - "&e"
+    - "&a"
+    - "&b"
+    - "&9"
+    - "&d"
+    - "&5"
+    - "&3"
+    - "&2"
